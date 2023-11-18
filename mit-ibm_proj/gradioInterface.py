@@ -1,20 +1,21 @@
 import gradio as gr
-from WIP_pipeline import get_response
+from pipeline import get_response
+
+def response_interface(gradio_input):
+    response = get_response(gradio_input)
+    return response
 
 
-with gr.Blocks() as demo:
-    chatbot = gr.Chatbot()
-    msg = gr.Textbox()
-    clear = gr.ClearButton([msg, chatbot])
+iface = gr.Interface(
+    fn=response_interface,
+    inputs="text",
+    outputs="text",
+    live=True,
+    title="Falcon 40B Teaching Assistant",
+    description="Ask a question and get a response.",
+)
 
-    def respond(message, chat_history):
-        bot_message = get_response(message)
-        chat_history.append((message, bot_message))
-        return "", chat_history
-
-    msg.submit(respond, [msg, chatbot], [msg, chatbot])
-
-demo.launch(share=True)
+iface.launch()
 
 # #### SUBJECT IDENTIFY ####
 # # set up model

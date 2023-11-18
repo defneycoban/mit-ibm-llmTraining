@@ -1,0 +1,66 @@
+#sentenceTransformer
+from sentence_transformers import SentenceTransformer, util
+import nltk
+from nltk.tokenize import sent_tokenize
+#paraphraser
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+tokenizer = AutoTokenizer.from_pretrained("humarin/chatgpt_paraphraser_on_T5_base")
+paraphrase_model = AutoModelForSeq2SeqLM.from_pretrained("humarin/chatgpt_paraphraser_on_T5_base")
+
+nltk.download('punkt')
+st_model = SentenceTransformer('multi-qa-MiniLM-L6-cos-v1')
+
+paragraph = "The passage is part of a treaty between an Assyrian king and the ruler of a subject city-state in northwestern Iran. In this treaty, the consequences invoked in the ritual curse involve Adad, the god associated with weather and fertility. The curse threatens severe consequences related to agriculture and sustenance, such as the end of vegetation, destructive downpours, crop destruction, and a lack of food. The historian would most likely use this passage to illustrate the precarious nature of early civilizations relationship to their physical environment. The curse in the treaty is centered around agricultural consequences, indicating that the well-being of the land and its agricultural productivity were of significant concern and importance to the government. The historian would not use this passage to illustrate the negative effect of overpopulation on urban sanitation and health, the emergence of social hierarchies supported by unequal distribution of surplus food, or the nutritional deficiencies suffered by early agricultural populations."
+sentences = sent_tokenize(paragraph)
+#debug purpose
+print(f"Old paragraph: {paragraph}")
+
+key_embedding = st_model.encode("(A) The precarious nature of early civilizations relationship to their physical environment")
+answer_embeddings = st_model.encode(sentences)
+similarities = [util.dot_score(key_embedding, answer_embedding) for answer_embedding in answer_embeddings]
+
+max_similarity_index = similarities.index(max(similarities))
+sentence_with_highest_similarity = sentences[max_similarity_index]
+
+# Debug Purpose
+(f"Sentence with the highest similarity: {sentence_with_highest_similarity}")
+
+# paraphraser function definition
+def paraphrase(
+    question,
+    num_beams=5,
+    num_beam_groups=5,
+    num_return_sequences=1, # change this to get more sentences if needed
+    repetition_penalty=10.0,
+    diversity_penalty=3.0,
+    no_repeat_ngram_size=2,
+    max_length=128
+):
+    input_ids = tokenizer(
+        f'paraphrase: {question}',
+        return_tensors="pt", padding="longest",
+        max_length=max_length,
+        truncation=True,
+    ).input_ids
+    
+    outputs = paraphrase_model.generate(
+        input_ids, repetition_penalty=repetition_penalty,
+        num_return_sequences=num_return_sequences, no_repeat_ngram_size=no_repeat_ngram_size,
+        num_beams=num_beams, num_beam_groups=num_beam_groups,
+        max_length=max_length, diversity_penalty=diversity_penalty
+    )
+
+    res = tokenizer.batch_decode(outputs, skip_special_tokens=True)
+
+    return res
+
+paraphrased_text = paraphrase(sentence_with_highest_similarity)[0]
+sentences[max_similarity_index] = paraphrased_text
+print(f"New paragraph: {paragraph}") 
+
+
+
+
+
+
+

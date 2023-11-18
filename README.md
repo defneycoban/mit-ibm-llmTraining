@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Falcon40B Teaching Assistant is a powerful tool designed to assist students in AP History and AP Biology by providing helpful hints and guidance for their questions. Leveraging the IBM Falcon 40B model, this application employs a Gradio interface for easy interaction.
+The Falcon40B Teaching Assistant is a powerful tool designed to assist students in AP History Subjects (AP Euro, AP World, AP US History) and AP Biology by providing helpful hints and guidance for their questions. Leveraging the IBM Falcon 40B model, this application employs a Gradio interface for easy interaction.
 
 ## Features
 

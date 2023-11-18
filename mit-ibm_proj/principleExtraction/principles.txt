@@ -1,4 +1,4 @@
-Subject: History
+Subject: history
 Principle: Follow the following principles:
 1. Let's solve step-by-step.
 2. First give a high-level summary of the excerpt.
@@ -24,17 +24,33 @@ Excerpt: The section most closely related to the question is: "May the god Adad,
 
 Analysis: The question seeks to determine which statement about ancient Mesopotamia is most strongly supported by the consequences described in the treaty. We need to consider the implications of these consequences on the society's priorities and concerns.
 
-##Questions##
+## Question ##
 
 Subject: bio
-Principle: 
-Follow the following principles:
-1. (Question Analysis) Start by thoroughly analyzing the given question. Understand its context, including any scientific concepts, terms, or biological systems it involves. Determine the specific information the question is seeking.
-2. (Define Keywords and Options) After analyzing the question, define and explain the essential keywords and options presented in the question. This involves providing clear definitions and explanations for any scientific terms, concepts, or components that are relevant to the question and answer options.
-3. (Background Information) When necessary, offer background information related to the biology topic in question. This may involve explaining fundamental biological concepts, principles, or processes that are crucial for understanding the question and its answer.
-4. (Step-by-Step Explanation) Present a step-by-step explanation of the biological process or concept that pertains to the question. This explanation should follow a logical sequence, making it easier for the user to understand the underlying principles. Start with the most basic concepts and progress to more advanced ones.
-5. (Address Each Answer Option) For multiple-choice questions, address each answer option separately. Explain why each option is correct or incorrect based on the principles of biology. Be sure to avoid disclosing the final answer, but provide enough information to help the user eliminate incorrect options.
-6. (Encourage Critical Thinking) Encourage critical thinking by suggesting how to approach similar questions and how to evaluate answer choices systematically. Provide guidance on identifying key cues within the question and answer options that can lead to the correct answer.
-7. (Emphasize Key Takeaways) Summarize key takeaways or principles that are crucial to answering the question correctly. This helps the user retain essential information and concepts for future reference.
+Principle: Follow the following principles:
+1. First analyze the question.
+2. Second, Give the definition of some keywords in the question and the options
+3. Give necessary background in biology when needed,
+4. Do not reveal the final answer.
 
-##Question##
+## Example ##
+## Question ##
+A dog is following the scent of a jackrabbit. Which of the following accurately describes how the dog’s brain integrates information for smell?
+
+(A) Chemoreceptors in the brain send impulses for smell in the nasal cavity.
+(B) Chemoreceptor cells in the nasal cavity send impulses to the appropriate area of the brain.
+(C) Chemoreceptors on epithelial cells of the tongue send hormones to the appropriate area of the brain.
+(D) Receptors originating in the nose send action potentials to the motor regions of the brain.
+
+## Answer ##
+Analysis: The question seems to be focused on understanding the mechanism by which a dog's brain processes the sense of smell. It requires a basic understanding of the sensory system involved in the detection of scent and the transmission of signals to the brain.
+
+Definition of keywords:
+Chemoreceptors: These are sensory receptors that detect chemical stimuli in the environment, such as taste and smell.
+Nasal cavity: This refers to the inside of the nose, which filters, warms, and moistens air as it is inhaled.
+Hormones: Chemical messengers produced by various glands in the body that regulate various functions.
+Epithelial cells: These are the cells that form the surface of the skin and line the cavities and surfaces of blood vessels and organs.
+
+Necessary background in biology: In biology, understanding the olfactory system is crucial. The olfactory system involves the detection of odors and scents and is closely related to the sense of smell. It includes specialized chemoreceptor cells located in the nasal cavity that detect different odorous molecules. These cells then send signals to the brain for further processing.
+
+## Question ##

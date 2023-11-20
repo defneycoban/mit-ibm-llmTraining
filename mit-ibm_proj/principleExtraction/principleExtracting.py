@@ -3,7 +3,7 @@ class SubjectPrincipleDictionary:
         self.subject_principle_dict = self.create_subject_principle_dict()
 
     def create_subject_principle_dict(self): 
-        file_name = "/Users/yuhanyang/Desktop/mit-ibm_proj/principleExtraction/principles.txt" 
+        file_name = "mit-ibm_proj/principleExtraction/principles.txt" 
         subject_principle_dict = {}
         with open(file_name, 'r') as file:
             lines = file.read().split("Subject: ")

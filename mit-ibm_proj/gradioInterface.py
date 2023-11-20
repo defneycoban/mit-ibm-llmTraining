@@ -1,8 +1,8 @@
 import gradio as gr
 from pipeline import get_response
 
-def response_interface(gradio_input):
-    response = get_response(gradio_input)
+def response_interface(input):
+    response = get_response(input)
     return response
 
 
@@ -12,7 +12,7 @@ iface = gr.Interface(
     outputs="text",
     live=True,
     title="Falcon 40B Teaching Assistant",
-    description="Ask a question and get a response.",
+    description="Your Helpful AI Teaching Assistant for AP Exams",
 )
 
 iface.launch()

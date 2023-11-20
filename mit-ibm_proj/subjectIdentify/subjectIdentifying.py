@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, classification_report
 
 
 def identify_subject(new_question):
-    df = pd.read_csv('/Users/yuhanyang/Desktop/mit-ibm_proj/subjectIdentify/subjectData3.csv')
+    df = pd.read_csv('mit-ibm_proj/subjectIdentify/subjectData3.csv')
     df.head()
 
     X = df['question']
@@ -26,11 +26,5 @@ def identify_subject(new_question):
     # report = classification_report(y_test, y_pred)
 
     predicted_subject = model.predict(tfidf_vectorizer.transform(new_question))
-
     return predicted_subject[0]
-
-    # print(predicted_subject)
-    # print(accuracy)
-
-
 

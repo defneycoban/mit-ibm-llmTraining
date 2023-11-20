@@ -31,7 +31,7 @@ The Falcon40B Teaching Assistant is a powerful tool designed to assist students 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/falcon40b-teaching-assistant.git
+   git clone https://github.com/your-username/mit-ibm-llmTraining.git
    ```
 
 2. Install dependencies:

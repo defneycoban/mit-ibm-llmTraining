@@ -10,7 +10,6 @@ iface = gr.Interface(
     fn=response_interface,
     inputs="text",
     outputs="text",
-    live=True,
     title="Falcon 40B Teaching Assistant",
     description="Your Helpful AI Teaching Assistant for AP Exams",
 )

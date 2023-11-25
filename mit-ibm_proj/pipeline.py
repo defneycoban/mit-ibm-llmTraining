@@ -62,10 +62,12 @@ model = Model("tiiuae/falcon-40b", params=params, credentials=creds)
 
 # function version of getting response
 
+unwanted_phrases = ["## Question ##", "##Answer##", "## Answer ##", "Answer:"]
+
 # remove stop sequences from hint
-def remove_phrases(hint, stop_seqs):
-    for stop_seq in stop_seqs:
-        hint = hint.replace(stop_seq, '')
+def remove_phrases(hint, unwanted_phrases):
+    for phrase in unwanted_phrases:
+        hint = hint.replace(phrase, '')
     return hint
 
 def get_response(new_question):
@@ -88,7 +90,7 @@ def get_response(new_question):
 
     # Post Process
 
-    hint = remove_phrases(hint, stop_seqs)
+    hint = remove_phrases(hint, unwanted_phrases)
 
     return hint
     

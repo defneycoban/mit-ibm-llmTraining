@@ -23,7 +23,9 @@ api_key = os.getenv("GENAI_KEY", None)
 api_url = os.getenv("GENAI_API", None)
 creds = Credentials(api_key, api_endpoint=api_url)
 
-params = GenerateParams(decoding_method="greedy", max_new_tokens=300)
+stop_seqs = ["## Question ##"]
+#params = GenerateParams(decoding_method="greedy", max_new_tokens=300)
+params = GenerateParams(decoding_method="greedy", stop_sequences=stop_seqs, max_new_tokens=300)
 
 model = Model("tiiuae/falcon-40b", params=params, credentials=creds)
 # model = Model("meta-llama/llama-2-70b-chat", params=params, credentials=creds)
@@ -60,6 +62,12 @@ model = Model("tiiuae/falcon-40b", params=params, credentials=creds)
 
 # function version of getting response
 
+# remove stop sequences from hint
+def remove_phrases(hint, stop_seqs):
+    for stop_seq in stop_seqs:
+        hint = hint.replace(stop_seq, '')
+    return hint
+
 def get_response(new_question):
     question_string = ''.join(new_question)
 
@@ -76,9 +84,13 @@ def get_response(new_question):
     generated_responses = []
     for response in model.generate(prompts):
         generated_responses.append(response.generated_text)
-    return ' '.join(generated_responses)
+    hint = ' '.join(generated_responses)
 
     # Post Process
+
+    hint = remove_phrases(hint, stop_seqs)
+
+    return hint
     
 
     # return ' '.join(generated_responses)

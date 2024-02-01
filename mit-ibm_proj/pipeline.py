@@ -14,6 +14,14 @@ from principleExtraction.principleExtracting import SubjectPrincipleDictionary
 
 import gradio as gr
 
+# llemma stuff
+# from transformers import AutoTokenizer, AutoModelForCausalLM
+
+# llemma_tokenizer = AutoTokenizer.from_pretrained("EleutherAI/llemma_7b")
+# lemma_model = AutoModelForCausalLM.from_pretrained("EleutherAI/llemma_7b")
+
+# gr.load("models/EleutherAI/llemma_7b").launch()
+
 
 
 #### SUBJECT IDENTIFY ####

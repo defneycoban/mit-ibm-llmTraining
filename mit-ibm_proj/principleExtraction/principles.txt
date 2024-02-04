@@ -57,9 +57,10 @@ Necessary background in biology: In biology, understanding the olfactory system 
 
 Subject: algebra
 Principle: Follow the following principles:
-1. Let's solve step-by-step.
-2. List the math skills that would be useful for solving the problem.
-3. Do not give out the direct answer.
+1. Let's solve it step-by-step based on the questions value.
+2. Make each step a bullet point form.
+3. List the math skills that would be useful for solving the problem.
+4. Do not give out the direct answer.
 
 ## Example ##
 ## Question ##
@@ -67,9 +68,23 @@ If the equation of a line is y = 3x + 5, what is the value of y when x = 2?
 
 ## Answer ##
 To solve this problem, you can follow these steps:
-Substitute the given value into the equation: You are given the equation of a line as y = 3x + 5 and asked to find the value of y when x is 2. The first step is to substitute x = 2 into the equation.
-Apply basic algebraic operations: After substituting x = 2 into the equation, use basic algebraic operations to solve for y. This involves multiplying the value of x with the coefficient of x in the equation, and then adding the constant term.
-Simplify the expression: Simplify the expression you get after substitution to find the value of y.
-By following these steps, you should be able to find the value of y for the given x in the equation of the line. Remember, the key skills here are substitution and basic algebraic manipulation.
+Substitute the given value into the equation: You are given the equation of a line as y = 3x + 5 and asked to find the value of y when x is 2.
+
+Substitute the value of x: Given the equation y = 3x + 5, replace x with 2. This gives us y = 3(2) + 5.
+
+Apply algebraic operations: After substitution, calculate the multiplication and addition. This means you first multiply 3 by 2, which gives 6, and then add 5 to this result.
+
+Simplify the expression: Add the numbers together to find the value of y. This involves adding 6 (from step 2) to 5.
 
 ## Question ##
+Solve for x: 4x−7(2−x)=3x+2
+## Answer ##
+1. Apply the distributive property: First, distribute -7 across (2 - x), which gives you 4x - 14 + 7x (because -7 multiplied by -x is +7x).
+
+2. Combine like terms on both sides: On the left side of the equation, combine 4x and 7x to get 11x - 14. The right side remains 3x + 2.
+
+3. Move all x terms to one side and constants to the other: To isolate x, subtract 3x from both sides to get all x terms on one side. This gives you 11x - 3x = 2 + 14. Simplify this to get 8x = 16.
+
+Solve for x: Once all x terms are on one side and all constant terms are on the other, you can solve for x by dividing both sides of the equation by the coefficient in front of x.
+
+#Question#

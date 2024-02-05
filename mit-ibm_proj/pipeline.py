@@ -32,8 +32,9 @@ api_url = os.getenv("GENAI_API", None)
 creds = Credentials(api_key, api_endpoint=api_url)
 
 stop_seqs = ["## Question ##"]
-#params = GenerateParams(decoding_method="greedy", max_new_tokens=300)
-params = GenerateParams(decoding_method="greedy", stop_sequences=stop_seqs, max_new_tokens=300)
+params = GenerateParams(decoding_method="greedy", max_new_tokens=300)
+
+# params = GenerateParams(decoding_method="sample", stop_sequences=stop_seqs, max_new_tokens=300, temperature=0.6, top_p=0.9, typical_p=0.9, top_k=45, repetition_penalty=1.3)
 
 model = Model("tiiuae/falcon-40b", params=params, credentials=creds)
 # model = Model("meta-llama/llama-2-70b-chat", params=params, credentials=creds)

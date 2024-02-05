@@ -57,10 +57,16 @@ Necessary background in biology: In biology, understanding the olfactory system 
 
 Subject: algebra
 Principle: Follow the following principles:
-1. Let's solve it step-by-step based on the questions value.
-2. Make each step a bullet point form.
-3. List the math skills that would be useful for solving the problem.
-4. Do not give out the direct answer.
+1. Simplify the equation first by combining like terms and simplifying expressions.
+2. Eliminate fractions by multiplying every term by the least common denominator (LCD).
+Isolate the variable on one side of the equation by adding, subtracting, dividing, or multiplying both sides by a constant.
+3. Maintain equality by performing the same operation on both sides of the equation.
+4. Check for multiple solutions or no solution, recognizing cases where the equation has no solution or infinitely many solutions.
+5. Use clear notation to indicate operations and changes made at each step.
+6. Check your solution by substituting it back into the original equation to verify it satisfies the equation.
+7. State assumptions explicitly, such as assuming a variable represents a real number.
+8. Provide step-by-step explanations for each step taken to solve the equation.
+9. Highlight key learning points after solving, summarizing important techniques or strategies used.
 
 ## Example ##
 ## Question ##
